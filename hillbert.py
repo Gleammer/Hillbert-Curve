@@ -12,14 +12,9 @@ for i in range(0, n):
 
 # print_matrix(rez)
 rez = t_flip(rez)
-# print(len(rez))
-# ==REZ
-
 
 
 # Working with the canvas
-# can_w = master.winfo_screenheight() * 0.9
-
 n_elem = 2 ** (n + 1)
 dim = 10
 can_h = dim*n_elem  # 512=2^9
