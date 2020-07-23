@@ -26,7 +26,8 @@ def lr_flip(board):
 
 # Creates the next-level Hillbert matrix
 def hill(board):
-    temp1 = np.concatenate((t_flip(board), lr_flip(t_flip(board))), 1)
-    temp2 = np.concatenate((board, board), 1)
+    lenn = len(board)**2
+    temp1 = np.concatenate((t_flip(board), lr_flip(t_flip(lr_flip(board))) + 3 * lenn), 1)
+    temp2 = np.concatenate((board + lenn, board + 2 * lenn), 1)
     rez = np.concatenate((temp1, temp2), 0)
     return rez
